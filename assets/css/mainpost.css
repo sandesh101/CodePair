@@ -1,0 +1,40 @@
+.main_post{
+    border: 1px solid black;
+    margin: 50px;
+    padding: 20px;
+}
+
+.main_post h2{
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.ptitle{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.action{
+    display: flex;
+}
+
+.action input{
+    font-size: 18px;
+    font-weight: 500;
+    width: 60px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.action .edit:hover{
+    background: rgb(17, 231, 17);
+}
+.action .delete:hover{
+    background: rgb(236, 9, 9);
+}
+
+
