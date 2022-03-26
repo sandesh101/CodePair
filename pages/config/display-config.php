@@ -7,13 +7,15 @@
      $conn = mysqli_connect($servername, $username, $password, $dbname);
      mysqli_select_db($conn, $dbname);
 
-     $query = "SELECT *, ug.Username FROM post ps, userregister ug WHERE ps.id = ug.id";
+     $query = "SELECT * FROM post ps";
      $result = mysqli_query($conn, $query);
      $data = mysqli_num_rows($result);
-     $row = mysqli_fetch_assoc($result);
     //  echo $data;
+    //  $row = mysqli_fetch_assoc($result);
+    //  echo var_dump($row);
 
-    if($data!=0){
+     
+    if($data>0){
         while($row = mysqli_fetch_assoc($result)){
             echo "
             <div class='main_post'>
@@ -26,11 +28,12 @@
             </div>
             </div>
             <p>" .$row['PostDesc']. "</p>
-            <small>Posted by:" .$row['Username']. "</small>
-      
+            
          </div>
             ";
         }
+
+        mysqli_free_result($result);
     }
     else{
         echo "
@@ -41,5 +44,6 @@
 </div>  ";
     }
 
+    // mysqli_close($conn);
 
 ?>

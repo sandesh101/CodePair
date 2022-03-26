@@ -31,7 +31,7 @@
                header("location: ../index.php");
             }
             else{
-                echo "Failed to login";
+                die(mysqli_error($conn));
             }
         }
     }
