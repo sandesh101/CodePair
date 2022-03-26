@@ -22,7 +22,7 @@
             <div class='action'>
             <a href='./config/edit-config.php' class='edit'>Edit</a>
             &nbsp;
-            <a href='./config/delete-config.php' class='delete'>Delete</a>
+            <a href='./config/delete-config.php?id=$row[pid]' class='delete'>Delete</a>
             </div>
             </div>
             <p>" .$row['PostDesc']. "</p>
