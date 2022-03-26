@@ -6,8 +6,6 @@
     $dbname = "codepair";
     $dbtable = "userregister";
 
-    session_start();
-
     $conn = mysqli_connect($servername, $username, $password, $dbname);
     if(!$conn){
         die(mysqli_connect_error());
@@ -20,7 +18,7 @@
         if(!empty($_POST['fname']) && !empty($_POST['email']) && !empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['language'])){
             $name = $_POST['fname'];   
             $email = $_POST['email'];   
-            $usernmae = $_POST['username'];   
+            $username = $_POST['username'];   
             $password = $_POST['password'];   
             $language = $_POST['language'];   
         }

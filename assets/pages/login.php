@@ -6,7 +6,7 @@
 <div class="container">
     <div class="form_field">
         <h1>Login</h1>
-        <form action="../pages/config/signup-config.php" method="post" target="../index.php">
+        <form action="../pages/config/login-config.php" method="post" target="../index.php">
             <div class="username">
                 <label for="username">Username:</label><br>
                 <input type="text" name="username" placeholder="Username">
@@ -16,7 +16,7 @@
                 <input type="password" name="password" placeholder="Password">
             </div>
             <div class="button">
-                <input type="submit" value="Login" id="button" name="submit">
+                <input type="submit" value="Login" id="button" name="login">
             </div>
             <div class="register">
                 <h4>Don't have an account?</h4>
