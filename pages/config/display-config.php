@@ -7,9 +7,10 @@
      $conn = mysqli_connect($servername, $username, $password, $dbname);
      mysqli_select_db($conn, $dbname);
 
-     $query = "SELECT PostTitle, PostDesc FROM post";
+     $query = "SELECT *, ug.Username FROM post ps, userregister ug WHERE ps.id = ug.id";
      $result = mysqli_query($conn, $query);
      $data = mysqli_num_rows($result);
+     $row = mysqli_fetch_assoc($result);
     //  echo $data;
 
     if($data!=0){
@@ -30,6 +31,14 @@
          </div>
             ";
         }
+    }
+    else{
+        echo "
+        <div class='show'>
+   <h2>
+      User Don't Have Any Post!! Create One To Show
+   </h2>
+</div>  ";
     }
 
 

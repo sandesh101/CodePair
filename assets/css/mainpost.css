@@ -30,11 +30,25 @@
     transition: 0.2s ease;
 }
 
+
 .action .edit:hover{
     background: rgb(17, 231, 17);
 }
 .action .delete:hover{
     background: rgb(236, 9, 9);
+}
+
+.show{
+    color: red;
+    padding: 20px;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 
