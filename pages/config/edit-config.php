@@ -1,16 +1,34 @@
 <?php 
+    $title = "Edit Post";
+    require('../header.php');
 
-    include('display-config.php');
-    $id = $_GET['id']; 
-    $query = "DELETE FROM post WHERE pid = '$id'";
+    $servername = "localhost";
+     $username = "root";
+     $password = "";
+     $dbname = "codepair";  
+     
+     $conn = mysqli_connect($servername, $username, $password, $dbname);
+     mysqli_select_db($conn, $dbname);
 
-    $del = mysqli_query($conn, $query);
+     $pt = $_GET['title'];
+     $pd = $_GET['description'];
 
-    if($del){
-        header('location: ../index.php');
+    if($_GET['update']){
+        $title = $_GET['title'];
+        $description = $_GET['description'];
+
+        $query = "UPDATE post SET PostTitle = '$title', PostDesc = '$description'";
+
+        $result = mysqli_query($conn, $query);
+         
+        if($result){
+            echo "<script>alert('Record Updated Successfully')</script>";
+            header("location: ../index.php");
+        }
+        else{
+            die(mysqli_error($conn));
+        }
     }
-    else{
-        echo 'Failed to delete data';
-    }
+
 
 ?>

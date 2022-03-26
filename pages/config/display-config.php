@@ -20,7 +20,7 @@
             <div class='ptitle'>
             <h2>" .$row['PostTitle'] . "</h2>
             <div class='action'>
-            <a href='./config/edit-config.php' class='edit'>Edit</a>
+            <a href='./edit.php?id=$row[pid] & pt=$row[PostTitle] & pd=$row[PostDesc]' class='edit'>Edit</a>
             &nbsp;
             <a href='./config/delete-config.php?id=$row[pid]' class='delete'>Delete</a>
             </div>
