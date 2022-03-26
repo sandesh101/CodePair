@@ -7,7 +7,7 @@
      $conn = mysqli_connect($servername, $username, $password, $dbname);
      mysqli_select_db($conn, $dbname);
 
-     $query = "SELECT *, ug.Username FROM post ps, userregister ug";
+     $query = "SELECT *, ug.Username FROM post ps, userregister ug WHERE ps.id = ug.id";
      $result = mysqli_query($conn, $query);
      $data = mysqli_num_rows($result);
      $row = mysqli_fetch_assoc($result);
