@@ -5,16 +5,14 @@
      $dbname = "codepair";
      $dbtable = "userregister";   
 
-
-
     session_start();
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    mysqli_select_db($conn, $dbname);
+
     if(isset($_SESSION['username'])){
         header("location: index.php");
         exit;
     }
-
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-    mysqli_select_db($conn, $dbname);
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         if(empty(trim($_POST['username'])) || empty(trim($_POST['password']))){
@@ -28,7 +26,8 @@
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_array($result);
             if($row['Username'] == $username && $row['Pass'] == $password){
-               header("location: ../index.php");
+                $_SESSION['username'] = $username;
+                header("location: ../index.php");
             }
             else{
                 die(mysqli_error($conn));
