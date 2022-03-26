@@ -6,7 +6,7 @@
 <div class="container">
     <div class="form_field">
         <h1>Sign Up</h1>
-        <form action="../pages/config/signup-config.php" method="post">
+        <form action="../pages/config/signup-config.php" method="post" target="../index.php">
             <div class="fname">
                 <label for="fname">Full name:</label><br>
                 <input type="text" name="fname" placeholder="Full Name">
@@ -29,6 +29,11 @@
             </div>
             <div class="button">
                 <input type="submit" value="Register" id="button" name="submit">
+            </div>
+            <div class="login">
+            <h4>Already have an account? </h4>
+            <br>
+            <a href="./login.php">Login</a>
             </div>
         </form>
     </div>
