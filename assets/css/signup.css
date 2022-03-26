@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../img/signupbg.png);
+    font-family: 'Red Hat Mono', monospace;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_field h1{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.form_field{
+    /* margin: 20px; */
+    width: 200px;
+    color: white;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+form input{
+    margin-bottom: 10px;
+    height: 20px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+form #button{
+    cursor: pointer;
+}
+
