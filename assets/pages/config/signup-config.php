@@ -12,9 +12,7 @@
     if(!$conn){
         die(mysqli_connect_error());
     }
-    else{
-        echo "Connection Successfull";
-    }
+    
     mysqli_select_db($conn, $dbname);
 
     if(isset($_POST['submit'])){
