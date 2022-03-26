@@ -6,7 +6,7 @@
 <div class="container">
     <div class="form_field">
         <h1>Sign Up</h1>
-        <form action="" method="post">
+        <form action="../pages/config/signup-config.php" method="post">
             <div class="fname">
                 <label for="fname">Full name:</label><br>
                 <input type="text" name="fname" placeholder="Full Name">
