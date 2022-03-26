@@ -15,14 +15,14 @@
 
         if(empty($err)){
             $title = $_POST['title'];
-            $desription = $_POST['descriptio'];
-            $query = "INSERT INTO $dbtable(FullName, Email, Username, Pass, Languages)VALUES('$name','$email','$username','$password','$language')";
+            $desription = $_POST['description'];
+            $query = "INSERT INTO $dbtable(PostTitle, PostDesc)VALUES('$title','$desription')";
             $create = mysqli_query($conn, $query);
             if(!$create){
                 die(mysqli_error($conn));
             }
             else{
-                echo "Post Created Successfully";
+                header("location: ../index.php");
             }
         }
     }
