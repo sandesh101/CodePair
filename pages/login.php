@@ -6,7 +6,7 @@
 <div class="container">
     <div class="form_field">
         <h1>Login</h1>
-        <form action="../pages/config/login-config.php" method="post" target="../index.php">
+        <form action="./config/login-config.php" method="post">
             <div class="username">
                 <label for="username">Username:</label><br>
                 <input type="text" name="username" placeholder="Username">

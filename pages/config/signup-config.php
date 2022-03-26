@@ -28,6 +28,9 @@
         if(!$insert){
             die(mysqli_error($conn));
         }
+        else{
+            header("location: ../index.php");
+        }
        
     
     }

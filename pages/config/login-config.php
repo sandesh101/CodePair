@@ -28,7 +28,7 @@
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_array($result);
             if($row['Username'] == $username && $row['Pass'] == $password){
-               header("location: .././index.php");
+               header("location: ../index.php");
             }
             else{
                 echo "Failed to login";
