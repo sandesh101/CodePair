@@ -7,7 +7,7 @@
      $conn = mysqli_connect($servername, $username, $password, $dbname);
      mysqli_select_db($conn, $dbname);
 
-     $query = "SELECT *, ug.Username FROM post ps, userregister ug WHERE ps.id = ug.id";
+     $query = "SELECT *, ug.Username FROM post ps, userregister ug";
      $result = mysqli_query($conn, $query);
      $data = mysqli_num_rows($result);
      $row = mysqli_fetch_assoc($result);
@@ -20,13 +20,13 @@
             <div class='ptitle'>
             <h2>" .$row['PostTitle'] . "</h2>
             <div class='action'>
-            <input type='submit' value='Edit' class='edit' name='edit'>
+            <a href='./config/edit-config.php' class='edit'>Edit</a>
             &nbsp;
-            <input type='submit' value='Delete' class='delete' name='delete'>
+            <a href='./config/delete-config.php' class='delete'>Delete</a>
             </div>
             </div>
             <p>" .$row['PostDesc']. "</p>
-            <small>Posted by: sandesh1</small>
+            <small>Posted by:" .$row['Username']. "</small>
       
          </div>
             ";

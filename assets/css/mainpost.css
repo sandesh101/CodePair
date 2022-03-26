@@ -2,6 +2,7 @@
     border: 1px solid black;
     margin: 50px;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .main_post h2{
@@ -18,16 +19,19 @@
     display: flex;
 }
 
-.action input{
+.action a{
+    color: black;
+    text-align: center;
     font-size: 18px;
-    font-weight: 500;
-    width: 60px;
+    font-weight: 700;
+    width: 100px;
     height: 40px;
     background: transparent;
     border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.2s ease;
+    text-decoration: none;
 }
 
 
