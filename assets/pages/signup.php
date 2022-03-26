@@ -28,7 +28,7 @@
                 <input type="text" name="language" placeholder="Language to learn">
             </div>
             <div class="button">
-                <input type="submit" value="Register" id="button">
+                <input type="submit" value="Register" id="button" name="submit">
             </div>
         </form>
     </div>

@@ -4,6 +4,7 @@
     $username = "root";
     $password = "";
     $dbname = "codepair";
+    $dbtable = "userregister";
 
     session_start();
 
@@ -13,6 +14,26 @@
     }
     else{
         echo "Connection Successfull";
+    }
+    mysqli_select_db($conn, $dbname);
+
+    if(isset($_POST['submit'])){
+        // echo "User Submited";
+        if(!empty($_POST['fname']) && !empty($_POST['email']) && !empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['language'])){
+            $name = $_POST['fname'];   
+            $email = $_POST['email'];   
+            $usernmae = $_POST['username'];   
+            $password = $_POST['password'];   
+            $language = $_POST['language'];   
+        }
+
+        $query = "INSERT INTO $dbtable(FullName, Email, Username, Pass, Languages)VALUES('$name','$email','$username','$password','$language')";
+        $insert = mysqli_query($conn, $query);
+        if(!$insert){
+            die(mysqli_error($conn));
+        }
+       
+    
     }
 
 
