@@ -6,7 +6,9 @@
      $username = "root";
      $password = "";
      $dbname = "codepair";  
+
      
+    session_start();
      $conn = mysqli_connect($servername, $username, $password, $dbname);
      mysqli_select_db($conn, $dbname);
 
@@ -29,6 +31,6 @@
             die(mysqli_error($conn));
         }
     }
-
+    // session_destroy();
 
 ?>

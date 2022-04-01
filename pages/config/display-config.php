@@ -9,7 +9,7 @@
      $conn = mysqli_connect($servername, $username, $password, $dbname);
      mysqli_select_db($conn, $dbname);
 
-     echo "Welcome" . $_SESSION['username'];
+    //  echo "Welcome" . $_SESSION['username'];
      
 
      $query = "SELECT * FROM post";
@@ -52,11 +52,12 @@
         echo "
         <div class='show'>
    <h2>
-      User Don't Have Any Post!! Create One To Show
+      No Any Post!! Create One To Show
    </h2>
 </div>  ";
     }
 
     // mysqli_close($conn);
+    session_destroy();
 
 ?>
