@@ -3,28 +3,15 @@
      $username = "root";
      $password = "";
      $dbname = "codepair";  
-     
 
-     session_start();
      $conn = mysqli_connect($servername, $username, $password, $dbname);
      mysqli_select_db($conn, $dbname);
 
-    //  echo "Welcome" . $_SESSION['username'];
-     
-
      $query = "SELECT * FROM post";
-    //  $uquery = "SELECT Username FROM userregister";
      $result = mysqli_query($conn, $query);
-    //  $userresult = mysqli_query($conn,$uquery);
      $data = mysqli_num_rows($result);
-    //  echo $data;
-    //  $row = mysqli_fetch_assoc($result);
-    //  echo var_dump($row);
     $date = date('d/m/Y');
-    // $urow = mysqli_fetch_assoc($userresult);
-    // $username = $_SESSION['username'];
-    // echo $username;
-     
+    echo "<div class='main_post'><h1>Welocome " . $_SESSION['username'] . "</h1></div>";
     if($data>0){
         while($row = mysqli_fetch_assoc($result)){
             echo "
@@ -39,7 +26,8 @@
             </div>
             <p>" .$row['PostDesc']. "</p>
             <small><strong>Posted on: " . $date . "</strong></small>
-            <small>Posted by: " . $date . "</small>
+            <br>
+            <input type='text' placeholder='Add a comment' class='comment' name='comment'>
             
 
          </div>
@@ -56,8 +44,5 @@
    </h2>
 </div>  ";
     }
-
-    // mysqli_close($conn);
-    session_destroy();
 
 ?>

@@ -1,6 +1,7 @@
 <?php
     $title = "Login";
     include('header.php');
+    session_start();
 ?>
 
 <div class="container">
@@ -11,6 +12,7 @@
                 <label for="username">Username:</label><br>
                 <input type="text" name="username" placeholder="Username">
             </div>
+            
             <div class="password">
                 <label for="password">Password:</label><br>
                 <input type="password" name="password" placeholder="Password">

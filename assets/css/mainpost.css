@@ -1,25 +1,25 @@
-.main_post{
+.main_post {
     border: 1px solid black;
     margin: 50px;
     padding: 20px;
     border-radius: 10px;
 }
 
-.main_post h2{
+.main_post h2 {
     margin-bottom: 20px;
     margin-right: 20px;
 }
 
-.ptitle{
+.ptitle {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
-.action{
+.action {
     display: flex;
 }
 
-.action a{
+.action a {
     color: black;
     text-align: center;
     font-size: 18px;
@@ -35,14 +35,15 @@
 }
 
 
-.action .edit:hover{
-    background: rgb(17, 231, 17);
+.action .edit:hover {
+    background: rgb(6, 201, 6);
 }
-.action .delete:hover{
+
+.action .delete:hover {
     background: rgb(236, 9, 9);
 }
 
-.show{
+.show {
     color: red;
     padding: 20px;
     width: 50%;
@@ -56,3 +57,19 @@
 }
 
 
+.comment {
+    background-color: rgb(185, 120, 120);
+    height: 20px;
+    margin-top: 10px;
+    padding: 20px;
+    width: 97%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* .u_name {
+    border: 1px solid rgb(168, 28, 28);
+    margin: 50px;
+    padding: 20px;
+    border-radius: 10px;
+} */

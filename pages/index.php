@@ -1,7 +1,6 @@
 <?php
     $title = "Home";
-    require_once('./header.php');
-    // require_once('./footer.php');
+    include('./header.php');
     include('./homepage.php');
 ?>
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/mainpost.css">
+    <title>Document</title>
+</head>
+<style>
+</style>
+
+<body>
+    <div class='main_post'>
+        <div class='ptitle'>
+            <h2>HTML</h2>
+            <div class='action'>
+                <a href='./edit.php?id=$row[pid] & pt=$row[PostTitle] & pd=$row[PostDesc]' class='edit'>Edit</a>
+                &nbsp;
+                <a href='./config/delete-config.php?id=$row[pid]' class='delete'>Delete</a>
+            </div>
+        </div>
+        <p>Learning HTML</p>
+        <small><strong>Posted on: 06/021</strong></small>
+        <br>
+        <input type="text" placeholder="Add a comment" class="comment" name="comment">
+</body>
+
+</html>

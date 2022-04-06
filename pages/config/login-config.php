@@ -10,9 +10,10 @@
     mysqli_select_db($conn, $dbname);
 
     if(isset($_SESSION['username'])){
-        header("location: index.php");
-        exit;
+        header("location: ../index.php");
+        exit();
     }
+    $err = "";
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         if(empty(trim($_POST['username'])) || empty(trim($_POST['password']))){

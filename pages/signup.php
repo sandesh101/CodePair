@@ -1,6 +1,7 @@
 <?php
     $title = "Sign Up";
     include('header.php');
+    session_start();
 ?>
 
 <div class="container">
@@ -39,3 +40,4 @@
         </form>
     </div>
 </div>
+
